@@ -25,7 +25,7 @@ Este é um repositório base que você pode clonar para acelerar a inicializaç�
 1. Clone este repositório em seu sistema local:
 
 ```bash
-git clone https://seurepositorio.com/seuprojeto.git
+git clone https://github.com/whalterduarte/BaseprojetoNODEJS
 
 ```bash
 2. Depois de clonado execute o comando no terminal na pasta do projeto:
