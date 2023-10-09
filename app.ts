@@ -2,7 +2,10 @@ import express, {Request, Response}  from "express"
 import homeRoutes from './src/routes/homeRoutes'
 import bodyParser from 'body-parser'
 import path from 'path'
+import { allowInsecurePrototypeAccess } from '@handlebars/allow-prototype-access';
+const BD = require('./src/service/db')
 const exphbs = require('express-handlebars')
+
 require('dotenv').config()
 const app = express()
 const port = process.env.PORT
@@ -13,11 +16,14 @@ const port = process.env.PORT
  app.use(bodyParser.urlencoded({extended: false}))
  app.use(bodyParser.json())
  //Handlebars
- const handlebars = exphbs.create({ 
- partialsDir: path.join(__dirname, 'src/views/layouts/partials')})
- app.engine('handlebars', handlebars.engine )
- app.set('view engine', 'handlebars' )
- app.set('views', path.join(__dirname, 'src/views'))
+ const handlebars = exphbs.create({
+  handlebars: allowInsecurePrototypeAccess(require('handlebars')),
+  partialsDir: path.join(__dirname, 'src/views/layouts/partials'),
+});
+
+app.engine('handlebars', handlebars.engine);
+app.set('view engine', 'handlebars');
+app.set('views', path.join(__dirname, 'src/views'));
 
  //Rotas
    //Home

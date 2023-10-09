@@ -1,7 +1,12 @@
-{{>header}}
+{{> header}}
 
-<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;">
-  <h1 style="text-align: center; margin: 0; padding: 20px;">Base para projetos</h1>
+{{#usuarios}}
+<div> 
+  <ul>
+      <li><strong>Nome:</strong>{{this.name}}</li>
+      <li><strong>Sobrenome:</strong>{{this.sobrenome}}</li>
+  </ul>
 </div>
+{{/usuarios}}
 
-{{>footer}}
+{{> footer}}
