@@ -23,13 +23,35 @@ model User {
 model Project {
   id          Int    @id @default(autoincrement())
   linkgit     String
-  descproject String
+  descproject String @db.Text
   url         String
-  desc        String
+  desc        String @db.Text
   title       String @unique
-  body        String
+  body        String @db.Text
   slug        String @unique
   linkproject String @unique
 
   @@map("projects")
+}
+
+model Post {
+  id         Int      @id @default(autoincrement())
+  title      String
+  slug       String   @unique
+  content    String   @db.Text
+  url        String
+  date       DateTime @default(now())
+  author     String
+  category   Category @relation(fields: [categoryId], references: [id])
+  categoryId Int
+
+  @@map("posts")
+}
+
+model Category {
+  id    Int    @id @default(autoincrement())
+  name  String @unique
+  posts Post[]
+
+  @@map("categorys")
 }

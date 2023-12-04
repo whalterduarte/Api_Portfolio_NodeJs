@@ -1,6 +1,7 @@
 import express, {Request, Response}  from "express"
 import login from './src/routes/login.routes'
 import projects from './src/routes/projects.routes'
+import blog from './src/routes/blog.routes'
 import bodyParser from 'body-parser'
 import path from 'path'
 import cors from "cors"
@@ -28,8 +29,10 @@ app.use(cors(corsOptions));
  //Rotas
    //Home
  app.use('/', login)
- app.use('/project',projects )
-
+   //Project
+ app.use('/project',projects)
+   //Blog
+ app.use('/blog',blog)
 
 //Para rotas não encotradas
 app.use((req: Request, res:Response)=>{

@@ -13,7 +13,7 @@ export const getProjects = async (req:Request, res:Response) =>{
    return res.json({success: true, projects})
  } catch (error) {
   console.log(error)
-  return res.json({Server: 'Error interno', error})
+  return res.status(500).json({ server: 'Erro interno', error })
  }
 }
 
