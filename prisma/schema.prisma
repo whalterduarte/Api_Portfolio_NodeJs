@@ -39,6 +39,7 @@ model Post {
   title      String
   slug       String   @unique
   content    String   @db.Text
+  body       String   @db.Text
   url        String
   date       DateTime @default(now())
   author     String
