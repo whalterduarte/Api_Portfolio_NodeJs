@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "scripts": {
+   "scripts": {
     "start": "node dist/app.js",
     "build": "tsc",
     "deploy": "npm run build && npx prisma db push && npm ci && npm start"
