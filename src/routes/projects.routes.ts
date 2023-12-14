@@ -2,11 +2,13 @@ import { Router } from 'express'
 import * as projects from '../controller/projects.controller'
 import multer from "multer"
 import { Auth } from '../middleware/auth'
+import path from 'path'
 
 //Multer
 const storage = multer.diskStorage({
-  destination: (req, file, cb)=>{
-    cb(null, '../public/myprojects')
+  destination: (req, file, cb) => {
+    const absolutePath = path.join(__dirname, 'dist', 'public', 'myprojects');
+    cb(null, absolutePath);
   },
   filename: (req, file, cb)=>{
     let randomNamePhoto = Math.floor(Math.random()*9999999)
