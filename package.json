@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.ts",
-    "deploy": "npm run build && node dist/app.js"
-
+    "start": "ts-node app.ts",
+    "build": "tsc",
+    "deploy": "npm run build && npm start"
   },
   "keywords": [],
   "author": "",
