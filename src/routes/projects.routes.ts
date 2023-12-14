@@ -1,6 +1,7 @@
 import { Router } from 'express'
 import * as projects from '../controller/projects.controller'
 import multer from "multer"
+import { Auth } from '../middleware/auth'
 
 //Multer
 const storage = multer.diskStorage({
@@ -34,7 +35,7 @@ const router = Router()
 router.get('/', projects.getProjects )
 router.get('/:slug', projects.descProject)
 
-router.post('/add', upload.single('photo'), projects.addProject)
+router.post('/add',  upload.single('photo'), projects.addProject)
 
 export default router;
 

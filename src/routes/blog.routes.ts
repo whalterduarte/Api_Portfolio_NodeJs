@@ -34,6 +34,6 @@ router.get('/posts', posts.getAllPosts)
 router.get('/posts/:name', posts.getPostsByCategory)
 router.get('/posts/:name/:slug', posts.getPostInCategory)
 
-router.post('/admin/newpost', Auth.private, upload.single('photo'), posts.newPost)
+router.post('/admin/newpost', upload.single('photo'), posts.newPost)
 
 export default router;
