@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/app.js",
+    "start": "node --loader ts-node/esm dist/app.js",
     "build": "tsc",
-    "deploy": "npm run build && npx prisma db push && npm start &"
-  },
+    "deploy": "npm install --save-dev ts-node && npm run build && npx prisma db push && node --loader ts-node/esm dist/app.js &"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
