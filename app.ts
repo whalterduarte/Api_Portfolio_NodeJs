@@ -12,7 +12,15 @@ const port = process.env.PORT
 
   // Configuração do CORS
   const corsOptions = {
-    origin: ['whalter.vercel.app', 'http://45.169.47.94', 'https://45.169.47.94'],
+    origin: ['whalter.vercel.app', 
+    'http://45.169.47.94', 
+    'https://45.169.47.94',
+    'http://44.226.145.213',
+    'http://54.187.200.255',
+    'http://34.213.214.55',
+    'http://35.164.95.156',
+    'http://44.230.95.183',
+    'http://44.229.200.200'],
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   optionsSuccessStatus: 200,
