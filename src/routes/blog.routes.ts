@@ -7,7 +7,7 @@ import path from 'path'
 //Multer
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    const absolutePath = path.join(__dirname, '..', 'dist', 'public', 'myposts');
+    const absolutePath = path.join(__filename, '..', '..', '..', 'dist', 'public', 'mypost');
     cb(null, absolutePath);
   },
   filename: (req, file, cb)=>{
