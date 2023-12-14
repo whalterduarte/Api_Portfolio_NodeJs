@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "deploy": "npm start"
+    "start": "node dist/app.js",
+    "build": "tsc",
+    "deploy": "npm install --production && npm run build && npm start"
   },
   "keywords": [],
   "author": "",
