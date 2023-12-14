@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node --loader ts-node/esm dist/app.js",
+    "start": "node dist/app.js",
     "build": "tsc",
-    "deploy": "npm install --save-dev ts-node && npm run build && npx prisma db push && node --loader ts-node/esm dist/app.js &"
+    "deploy": "npm run build && npx prisma db push && node dist/app.js &"
 },
   "keywords": [],
   "author": "",
