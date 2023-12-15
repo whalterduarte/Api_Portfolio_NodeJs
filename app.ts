@@ -20,10 +20,10 @@ const port = process.env.PORT
   //Public
 app.use(express.static(path.join(__dirname, './public')))
 
-app.use(cors(corsOptions));
+app.use(cors());
 
  //Body Parser
- app.use(bodyParser.urlencoded({extended: false}))
+ app.use(express.json())
  app.use(bodyParser.json())
 
  //Rotas
