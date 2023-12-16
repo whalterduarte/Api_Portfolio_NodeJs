@@ -5,8 +5,7 @@
   "main": "app.js",
    "scripts": {
     "start": "node dist/app.js",
-    "build": "tsc",
-    "deploy": "npm run build && npx prisma db push && npm ci && npm start"
+    "build": "tsc && npx prisma db push"
   },
   "keywords": [],
   "author": "",
