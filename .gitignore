@@ -89,6 +89,8 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
+# .gitignore
+/generated
 
 
 # Gatsby files
