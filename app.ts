@@ -24,7 +24,6 @@ app.use(cors());
 
  //Body Parser
  app.use(express.json())
- app.use(bodyParser.json())
 
  //Rotas
    //Home
