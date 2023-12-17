@@ -4,8 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node dist/app.js",
-    "build": "tsc && npx prisma db push"
+    "start": "nodemon app.ts"
   },
   "keywords": [],
   "author": "",
