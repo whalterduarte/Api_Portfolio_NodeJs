@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-   "scripts": {
+  "scripts": {
     "start": "node dist/app.js",
-    "build": "tsc && npx prisma db push"
+    "build": "tsc && npx prisma db push",
+    "vercel-build": "npm run build"
   },
   "keywords": [],
   "author": "",
