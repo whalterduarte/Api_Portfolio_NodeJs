@@ -36,7 +36,7 @@ app.use(cors());
 
 //Para rotas não encotradas
 app.use((req: Request, res:Response)=>{
-  res.status(404).send('Pagina não encontrada')
+  res.send('Pagina não encontrada')
 })
 
 
