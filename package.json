@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.ts"
+    "start": "nodemon app.ts",
+    "build": "tsc && prisma generate && npx prisma db push"
   },
   "keywords": [],
   "author": "",
