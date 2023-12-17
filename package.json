@@ -5,8 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node dist/app.js",
-    "build": "tsc && npx prisma db push",
-    "vercel-build": "npm run build"
+    "build": "tsc && npx prisma db push"
   },
   "keywords": [],
   "author": "",
