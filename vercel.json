@@ -5,29 +5,24 @@
       "src": "app.ts",
       "use": "@vercel/node",
       "config": {
-        "maxLambdaSize": "2048MB" 
-      },
-      "functions": {
-        "api/**/*.ts": {
-          "includeFiles": "src/**/*.ts"
-        }
+        "maxLambdaSize": "2048MB"
       }
     }
   ],
   "routes": [
-    { "src": "(.*)", "dest": "app.ts" }
+    {
+      "src": "(.*)",
+      "dest": "app.ts"
+    }
   ],
   "env": {
-    "DATABASE_URL": "sua-url-do-banco-de-dados"
+    "DATABASE_URL": "mysql://u936821836_whalter:91942117aW-@154.56.48.52:3306/u936821836_whalter"
   },
   "build": {
     "env": {
       "NODE_ENV": "production",
       "PRISMA_CLIENT_ENGINE_TYPE": "binary"
     },
-    "commands": {
-      "build": "tsc",
-      "postbuild": "npx prisma generate && npx prisma migrate deploy"
-    }
+    "postbuild": "npx prisma generate && npx prisma migrate deploy && tsc"
   }
 }
