@@ -34,10 +34,6 @@ app.use(cors());
    //Blog
  app.use('/blog',blog)
 
-//Para rotas não encotradas
-app.use((req: Request, res:Response)=>{
-  res.status(404).send('Pagina não encontrada')
-})
 
 
 app.listen(port, () => console.log(`Servidor rodando na porta : ${port}!`))
