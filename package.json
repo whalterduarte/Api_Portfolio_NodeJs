@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon app.ts",
     "build": "tsc",
-    "vercel-build": "npx prisma migrate deploy"
+    "vercel-build": "npx prisma db push"
   },
   "keywords": [],
   "author": "",
