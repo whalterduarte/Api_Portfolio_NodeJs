@@ -18,7 +18,7 @@ const port = process.env.PORT
   optionsSuccessStatus: 200,
 }
   //Public
-app.use(express.static(path.join(__dirname, './public')))
+app.use(express.static(path.join(__dirname, './dist/public')))
 
 app.use(cors());
 
