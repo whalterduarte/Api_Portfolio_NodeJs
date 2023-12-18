@@ -106,7 +106,7 @@ export const newPost = async (req: Request, res: Response) => {
  //New Post
  try {
   const { title, slug, content, body, url, author, categoryId } = req.body 
-  const photo: string = `${process.env.BASE}/myposts/${req.file?.filename}`
+  const photo: string = `${process.env.BASE}/uploads/${req.file?.filename}`
     if(!title || !slug  || !content || !body || !author || !categoryId|| !photo) {
       return res.json({Sever: 'Todos os campos são obrigatorios'})
     }else{

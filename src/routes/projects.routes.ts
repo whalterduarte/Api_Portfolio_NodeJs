@@ -6,7 +6,7 @@ import { Auth } from '../middleware/auth'
 //Multer
 const storage = multer.diskStorage({
   destination: (req, file, cb)=>{
-    cb(null, './dist/public/myprojects')
+    cb(null, '../public/uploads')
   },
   filename: (req, file, cb)=>{
     let randomNamePhoto = Math.floor(Math.random()*9999999)

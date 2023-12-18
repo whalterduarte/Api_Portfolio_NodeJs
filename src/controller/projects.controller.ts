@@ -62,7 +62,7 @@ export const addProject = async (req:Request, res:Response) =>{
   
     try {
       const { linkgit, descproject, url, desc, title, body, slug, linkproject } = req.body
-      const photo: string = `${process.env.BASE}/myprojects/${req.file?.filename}`
+      const photo: string = `${process.env.BASE}/uploads/${req.file?.filename}`
         if(!linkgit || !descproject || !desc || !title || !body || !slug || !linkproject || !photo) {
           return res.json({Sever: 'Todos os campos são obrigatorios'})
         }else{
