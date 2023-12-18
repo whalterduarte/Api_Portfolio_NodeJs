@@ -19,10 +19,10 @@ const upload: Multer = multer({
     acl: 'public-read',
     contentType: multerS3.AUTO_CONTENT_TYPE,
     key: (req: Request, file, cb) => {
-      console.log('File Object:', file); // Adicione esta linha para imprimir o objeto file
+      console.log('File Object:', file)
       let randomNamePhoto = Math.floor(Math.random() * 9999999);
-      const originalname = file.originalname || 'default';
-      cb(null, 'uploads/' + originalname + randomNamePhoto + Date.now() + '.jpg');
+      const originalname = file.originalname || 'default'
+      cb(null, 'uploads/' + originalname + randomNamePhoto + Date.now() + '.jpg')
     },
   }),
   fileFilter: (req: Request, file: Express.Multer.File, cb) => {
